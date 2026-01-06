@@ -1,0 +1,678 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 20px 5px;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text a {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.header-text a:visited {
+    color: black;
+}
+
+nav {
+    text-align: center;
+    padding-top: 20px;
+}
+
+nav ul {
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+}
+
+nav ul a.active {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+nav li {
+    padding: 0px 15px;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.div-footer {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.footer-link-container {
+    text-align: center;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.footer-link-container a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.footer-link-container a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+/* Text content sections */
+.text-content {
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.text-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-content h3 {
+    font-size: 18px;
+    margin: 25px 0 15px 0;
+    color: #444;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.text-content ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.text-content li {
+    margin-bottom: 8px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.text-content code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.text-content a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.text-content a:hover {
+    color: #000;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Hero row layout - icon beside text */
+.hero-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-row p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero .subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary {
+    background: #333;
+    color: white;
+    border: 2px solid #333;
+}
+
+.btn-primary:hover {
+    background: #555;
+    border-color: #555;
+}
+
+.btn-secondary {
+    background: white;
+    color: #333;
+    border: 2px solid #333;
+}
+
+.btn-secondary:hover {
+    background: #f5f5f5;
+}
+
+/* Features section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.feature-card ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.feature-card li {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Screenshot container */
+.screenshot-container {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.screenshot-container.large {
+    max-width: 1200px;
+}
+
+.screenshot-container.medium {
+    max-width: 900px;
+}
+
+.screenshot-container.small {
+    max-width: 700px;
+}
+
+/* Screenshot with frame effect */
+.screenshot {
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.screenshot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Screenshot with window chrome effect */
+.screenshot-window {
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.screenshot-window-header {
+    background: linear-gradient(to bottom, #f8f8f8, #e8e8e8);
+    border-bottom: 1px solid #d0d0d0;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.screenshot-window-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.screenshot-window-dot.red {
+    background: #ff5f57;
+}
+
+.screenshot-window-dot.yellow {
+    background: #febc2e;
+}
+
+.screenshot-window-dot.green {
+    background: #28c840;
+}
+
+.screenshot-window-title {
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-right: 52px; /* Balance the dots on left */
+}
+
+.screenshot-window img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Screenshot caption */
+.screenshot-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Screenshot grid for multiple images */
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.screenshot-grid .screenshot,
+.screenshot-grid .screenshot-window {
+    margin: 0;
+}
+
+/* Placeholder for missing screenshots */
+.screenshot-placeholder {
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 80px 20px;
+    text-align: center;
+    color: #999;
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+.screenshot-placeholder p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Screenshot with border only (minimal) */
+.screenshot-minimal {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.screenshot-minimal img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* Download section */
+.download-section {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.download-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.version-badge {
+    display: inline-block;
+    background: #f5f5f5;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.download-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.download-card {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.download-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.download-card .file-type {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.download-card a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.download-card a:hover {
+    background: #555;
+}
+
+.download-card a.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.download-note {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+.download-note a {
+    color: #333;
+}
+
+/* Docs section */
+.docs-section {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.docs-section h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.docs-nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.docs-nav button {
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.docs-nav button:hover {
+    background: #f5f5f5;
+}
+
+.docs-nav button.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.docs-content {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 30px;
+}
+
+.docs-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.docs-content h3 {
+    font-size: 18px;
+    margin: 25px 0 15px;
+    color: #444;
+}
+
+.docs-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.docs-content ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.docs-content li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.docs-content code {
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+/* About section */
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Arabic text */
+.arabic {
+    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+    direction: rtl;
+}
+
+/* Loading state */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-row p {
+        text-align: center;
+    }
+
+    .header-text a {
+        font-size: 2rem;
+    }
+
+    nav li {
+        padding: 0 10px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .download-cards {
+        grid-template-columns: 1fr;
+    }
+}
