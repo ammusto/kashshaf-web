@@ -130,13 +130,13 @@ const Docs = () => {
             <ul>
               <li><strong>Surface mode only:</strong> Wildcards only work in Surface search mode</li>
               <li><strong>One wildcard per term:</strong> Each search term can have at most one *</li>
-              <li><strong>No leading wildcard:</strong> The * cannot be at the start of a word (<code className="arabic">*كتاب</code> is invalid)</li>
+              <li><strong>No leading wildcard:</strong> The * cannot be at the start of a word (<code className="arabic">كتاب*</code> is invalid)</li>
               <li><strong>Internal wildcards need 2+ chars:</strong> For wildcards in the middle of a word, at least 2 characters must precede the *</li>
             </ul>
 
             <h3>Wildcard Types</h3>
             <p><strong>Prefix Wildcard (word ending)</strong></p>
-            <p><code className="arabic">كتا*</code> matches <span className="arabic">كتاب، كتابة، كتابه</span>, etc.</p>
+            <p><code className="arabic">*كتا</code> matches <span className="arabic">كتاب، كتابة، كتابه</span>, etc.</p>
 
             <p><strong>Internal Wildcard</strong></p>
             <p><code className="arabic">مع*ة</code> matches <span className="arabic">معرفة، معاملة، معاينة</span>, etc.</p>
@@ -144,7 +144,7 @@ const Docs = () => {
             <h3>Performance Considerations</h3>
             <p>Some wildcard patterns are more "expensive" (slower) than others:</p>
             <ul>
-              <li><strong>Faster:</strong> Longer prefixes before the * (e.g., <code className="arabic">استكت*</code> is faster than <code className="arabic">كت*</code>)</li>
+              <li><strong>Faster:</strong> Longer prefixes before the * (e.g., <code className="arabic">*استكت</code> is faster than <code className="arabic">*كت</code>)</li>
               <li><strong>Slower:</strong> Short prefixes match many more terms and take longer</li>
             </ul>
           </div>

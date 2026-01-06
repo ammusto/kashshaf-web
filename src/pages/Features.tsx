@@ -8,9 +8,9 @@ const Features = () => {
       {/* Main interface screenshot - window style */}
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src="/screenshots/main.png" alt="Kashshaf main interface" />
+          <img src="/screenshots/name.png" alt="Kashshaf main interface" />
         </div>
-        <p className="screenshot-caption">The main application interface</p>
+        <p className="screenshot-caption">Specialized name search</p>
       </div>
 
       <div className="features-grid">
@@ -75,7 +75,7 @@ const Features = () => {
         <div className="screenshot">
           <img src="/screenshots/highlight-query.png" alt="Search results with highlighting" />
         </div>
-        <p className="screenshot-caption">Search results with term highlighting</p>
+        <p className="screenshot-caption">Proximity search between a root (عرف) and a term (الله) </p>
       </div>
 
       <div className="features-grid">

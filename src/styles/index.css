@@ -91,7 +91,6 @@ nav li {
 footer {
     margin-top: auto;
     padding: 20px;
-    border-top: 1px solid #e0e0e0;
 }
 
 .div-footer {
@@ -631,7 +630,8 @@ main {
 /* Arabic text */
 .arabic {
     font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
-    direction: rtl;
+    direction: rtl !important;
+    font-size:1.3rem !important;
 }
 
 /* Loading state */
