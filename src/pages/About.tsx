@@ -6,14 +6,14 @@ const About = () => {
       <div className="text-content">
         <h2>Project Overview</h2>
         <p>
-          Al-Kashshāf (<span className="arabic">الكشّاف</span>) is a desktop application designed
-          for  working with medieval Arabic texts (currently the corpus contains pre-750/1350 texts). It provides linguistically
+          Al-Kashshāf (<span className="arabic">الكشّاف</span>) is available as both a <a href="https://app.kashshaf.com/" target="_blank" rel="noopener noreferrer">web application</a> and a desktop application, designed
+          for working with medieval Arabic texts (currently the corpus contains pre-750/1350 texts). It provides linguistically
           precise search capabilities that include morphological features. The corpus will soon be expanded to include all text up to 1348/1930.
         </p>
 
         <h3>The Corpus</h3>
         <p>
-          Al-Kashshāf searches across a large corpus of classical Arabic literature, including texts from
+          Al-Kashshāf searches across a large corpus of classical Arabic texts, including works across
           various genres such as jurisprudence (fiqh), Sufism (taṣawwuf), theology, history, and more.
           Each text has been processed with state-of-the-art morphological analysis to enable
           lemma and root-based searching.

@@ -1,6 +1,6 @@
 # al-Kashshaf Website
 
-Landing page for [al-Kashshaf](https://github.com/ammusto/kashshaf), a desktop application for linguistically precise search of medieval Arabic texts.
+Landing page for [al-Kashshaf](https://github.com/ammusto/kashshaf), a web and desktop application for linguistically precise search of medieval Arabic texts. Use the app online at [app.kashshaf.com](https://app.kashshaf.com/).
 
 ## Development
 

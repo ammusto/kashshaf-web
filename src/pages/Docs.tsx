@@ -19,10 +19,10 @@ const Docs = () => {
       case 'overview':
         return (
           <div>
-            <h2>al-Kashshāf Overview</h2>
+            <h2>Al-Kashshāf Overview</h2>
             <p>
-              al-Kashshāf is a research environment for exploring medieval Arabic texts. It provides powerful
-              search capabilities across a large corpus of classical Arabic literature, with morphological
+              Al-Kashshāf is a research environment for exploring medieval Arabic texts. It provides powerful
+              search capabilities across a large corpus of classical Arabic texts, with morphological
               analysis and flexible query options.
             </p>
 
@@ -84,7 +84,7 @@ const Docs = () => {
           <div>
             <h2>Search Modes</h2>
             <p>
-              al-Kashshāf offers three search modes that determine how your query is matched against the text.
+              Al-Kashshāf offers three search modes that determine how your query is matched against the text.
               Understanding these modes is key to effective searching.
             </p>
 
