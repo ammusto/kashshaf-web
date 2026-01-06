@@ -13,7 +13,7 @@ const Home = () => {
       </div>
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src="/screenshots/main.png" alt="Kashshaf main interface" />
+          <img src="/screenshots/front-page.png" alt="Kashshaf main interface" />
         </div>
       </div>
       <div className="hero-buttons">
