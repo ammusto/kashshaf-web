@@ -208,6 +208,20 @@ const Docs = () => {
               The filter persists across searches until you clear it.
             </p>
 
+            <h3>Collections</h3>
+            <p>Collections let you save named groups of texts (mini-corpora) that persist across sessions:</p>
+            <ul>
+              <li><strong>Create a collection:</strong> Select texts, then click the save icon in the sidebar or "Save Collection" button in the text selection modal</li>
+              <li><strong>Name and description:</strong> Give your collection a name (required) and optional description (up to 150 characters)</li>
+              <li><strong>Manage collections:</strong> Click <strong>Collections</strong> in the toolbar to view, edit, or delete your saved collections</li>
+              <li><strong>Edit texts:</strong> Click "Edit Texts" on any collection to add or remove texts from it</li>
+              <li><strong>Filter by collection:</strong> In the text selection modal, use the Collection filter to quickly select texts from one or more saved collections</li>
+            </ul>
+            <p>
+              <strong>Tip:</strong> Use collections to organize research projects - for example, create collections for "Sufi texts",
+              "4th century authors", or "Hadith commentaries" to quickly switch between different research contexts.
+            </p>
+
             <h3>Exporting Search Results</h3>
             <ul>
               <li><strong>Term/Name search:</strong> Click the export button in the results panel header</li>

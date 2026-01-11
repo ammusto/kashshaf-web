@@ -17,7 +17,7 @@ const Header = () => {
             <li><Link to="/features" className={isActive('/features') ? 'active' : ''}>Features</Link></li>
             <li><Link to="/download" className={isActive('/download') ? 'active' : ''}>Download</Link></li>
             <li><Link to="/docs" className={isActive('/docs') ? 'active' : ''}>Docs</Link></li>
-            <li><a href="https://app.kashshaf.com/" target="_blank" rel="noopener noreferrer" className="nav-app-link">Use App</a></li>
+            <li><a href="https://app.kashshaf.com/" target="_blank" rel="noopener noreferrer" className="nav-app-link">Web App</a></li>
             <li><Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link></li>
           </ul>
         </nav>
