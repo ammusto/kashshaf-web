@@ -13,8 +13,7 @@ const About = () => {
 
         <h3>The Corpus</h3>
         <p>
-          Al-Kashshāf searches across a large corpus of classical Arabic texts, including works across
-          various genres such as jurisprudence, Sufism, theology, history, and more.
+          Al-Kashshāf searches across a large corpus of classical Arabic texts.
           Each text has been processed with state-of-the-art morphological analysis to enable
           lemma and root-based searching.
         </p>
@@ -32,35 +31,53 @@ const About = () => {
         </p>
         <h4>Corpus Statistics</h4>
         <table className="corpus-stats">
-          <thead>
-            <tr>
-              <th>Metric</th>
-              <th>Value</th>
-            </tr>
-          </thead>
           <tbody>
             <tr>
               <td>Books</td>
-              <td>6,917</td>
+              <td>6,609</td>
             </tr>
             <tr>
               <td>Pages</td>
-              <td>5,495,060</td>
+              <td>5,358,763</td>
             </tr>
             <tr>
               <td>Tokens</td>
-              <td>943,471,799</td>
+              <td>913,183,882</td>
             </tr>
-            <tr>
-              <td>Unique token definitions</td>
-              <td>4,529,873</td>
-            </tr>
+            {/* <tr>
+              <td>Unique token</td>
+              <td>3,389,004</td>
+            </tr> */}
             <tr>
               <td>Database size</td>
               <td>~16 GB</td>
             </tr>
           </tbody>
         </table>
+
+        <h4>Data Aggregation and Cleaning</h4>
+        <p>
+          The corpus is compiled from three major sources of digitized Arabic texts:{' '}
+          <a href="https://shamela.ws/" target="_blank" rel="noopener noreferrer">al-Maktaba al-Shamela</a>,{' '}
+          <a href="https://openiti.org/" target="_blank" rel="noopener noreferrer">OpenITI</a>, and{' '}
+          <a href="https://nusus.net/" target="_blank" rel="noopener noreferrer">Nuṣūṣ</a>.
+          Only texts with authors who died before 1348 AH (1930 CE) are included to avoid copyright concerns.
+          Starting from approximately 6,920 texts, the corpus underwent a multi-stage cleaning process.
+        </p>
+        <p>
+          <strong>OCR Quality Filtering:</strong> The OpenITI corpus includes some texts produced through automatic OCR
+          (Kraken, AOCP, Escriptorium, Tesseract) that contain significant errors. These low-quality OCR texts
+          were removed from the corpus, reducing the book count by 311 texts.
+        </p>
+        <p>
+          <strong>Morphological Data Cleaning:</strong> The CAMeL Tools BERT disambiguator occasionally misclassifies
+          tokens as proper nouns (<em>noun_prop</em>) with unknown roots. While many of these are legitimate proper nouns
+          (like people or places), others are common words, abbreviations,
+          or OCR artifacts that were incorrectly tagged. A cleaning pipeline was applied to fix unambiguous cases
+          (where only one alternative analysis exists) and apply a handful of curated corrections for known systematic errors
+          such as abbreviations (<em>ثنا</em>, <em>نا</em>), adverbs (<em>حيث</em>, <em>هكذا</em>), and other grammatical particles.
+          This process corrected approximately 14.8 million token classifications.
+        </p>
         <h3>Text Processing Pipeline</h3>
         <p>
           Each text in the corpus undergoes a multi-stage processing pipeline to enable morphologically-aware search:
@@ -102,13 +119,13 @@ const About = () => {
 
         <h3>Technology</h3>
         <p>
-          The application is built using modern technologies:
+          The application is built using:
         </p>
         <ul>
           <li><strong>Tauri:</strong> Cross-platform desktop framework for native performance</li>
           <li><strong>Tantivy:</strong> High-performance full-text search engine</li>
           <li><strong>CAMeL Tools:</strong> State-of-the-art Arabic NLP for morphological analysis</li>
-          <li><strong>React:</strong> Modern user interface</li>
+          <li><strong>React:</strong> Performant UI</li>
         </ul>
         <h3>Development</h3>
         <p>Initital funding for this project under the name mutūn was provided by NYU's faculty DH seed grant program, with <a href="https://www.antoniomusto.com" target="_blank" rel="noopener noreferrer">Antonio Musto</a> as the PI and Giovanni DiRusso and Jeremy Farrell as team members. Project development went into hiatus due to lack of funding opportunities, but was restarted by Antonio, who is the sole developer.</p>
