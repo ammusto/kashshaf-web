@@ -41,7 +41,7 @@ const Features = () => {
       {/* Name search screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src="/screenshots/name.png" alt="Kashshaf main interface" />
+          <img src="/screenshots/name-search.png" alt="Kashshaf main interface" />
         </div>
         <p className="screenshot-caption">Specialized name search</p>
       </div>
