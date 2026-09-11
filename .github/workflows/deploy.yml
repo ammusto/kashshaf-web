@@ -1,0 +1,40 @@
+name: Deploy website
+
+# Push to main: build only (a dry run). Deploying www.kashshaf.com is a
+# workflow_dispatch with dry_run = false.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Build only; do not deploy"
+        type: boolean
+        default: true
+        required: true
+
+env:
+  DRY_RUN: ${{ github.event_name == 'push' || inputs.dry_run != false }}
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy to Cloudflare Pages (www.kashshaf.com)
+        if: env.DRY_RUN != 'true'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name ${{ vars.CF_PAGES_WEB_PROJECT || 'kashshaf-web' }} --branch main
+      - name: Dry run
+        if: env.DRY_RUN == 'true'
+        run: echo "built $(du -sh dist | cut -f1); would run wrangler pages deploy dist --project-name ${{ vars.CF_PAGES_WEB_PROJECT || 'kashshaf-web' }}"

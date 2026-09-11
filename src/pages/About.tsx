@@ -1,4 +1,56 @@
+import { useEffect, useState } from 'react';
+
+/** stats.json is written next to corpus_manifest.json by publish_corpus.py. */
+interface CorpusStats {
+  corpus_version: string;
+  built_at: string;
+  books: number;
+  pages: number;
+  tokens: number;
+  index_bytes: number;
+  db_bytes: number;
+  total_bytes?: number;
+}
+
+const STATS_URL = 'https://cdn.kashshaf.com/stats.json';
+
+// Shown until stats.json answers (and if it never does): the 2.0.0 figures.
+const FALLBACK: CorpusStats = {
+  corpus_version: '2.0.0',
+  built_at: '',
+  books: 7176,
+  pages: 5711697,
+  tokens: 987907098,
+  index_bytes: 0,
+  db_bytes: 0,
+};
+
+function formatGb(bytes: number): string {
+  return bytes > 0 ? `${(bytes / 1024 ** 3).toFixed(1)} GB` : '~17 GB';
+}
+
 const About = () => {
+  const [stats, setStats] = useState<CorpusStats>(FALLBACK);
+  const [live, setLive] = useState(false);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(STATS_URL, { cache: 'no-cache' })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
+      .then((data: CorpusStats) => {
+        if (!cancelled && typeof data.books === 'number' && typeof data.pages === 'number') {
+          setStats(data);
+          setLive(true);
+        }
+      })
+      .catch(() => {
+        /* keep the fallback figures */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <div className="about-section">
       <h1>About al-Kashshāf</h1>
@@ -33,24 +85,24 @@ const About = () => {
         <table className="corpus-stats">
           <tbody>
             <tr>
+              <td>Corpus version</td>
+              <td>{stats.corpus_version}{live && stats.built_at ? ` (built ${stats.built_at.slice(0, 10)})` : ''}</td>
+            </tr>
+            <tr>
               <td>Books</td>
-              <td>7,176</td>
+              <td>{stats.books.toLocaleString()}</td>
             </tr>
             <tr>
               <td>Pages</td>
-              <td>5,711,697</td>
+              <td>{stats.pages.toLocaleString()}</td>
             </tr>
             <tr>
               <td>Tokens</td>
-              <td>987,907,098</td>
+              <td>{stats.tokens.toLocaleString()}</td>
             </tr>
-            {/* <tr>
-              <td>Unique token</td>
-              <td>3,389,004</td>
-            </tr> */}
             <tr>
               <td>Database size</td>
-              <td>~17 GB</td>
+              <td>{formatGb(stats.db_bytes + stats.index_bytes)}</td>
             </tr>
           </tbody>
         </table>
