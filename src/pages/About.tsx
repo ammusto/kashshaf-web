@@ -58,7 +58,7 @@ const About = () => {
       <div className="text-content">
         <h2>Project Overview</h2>
         <p>
-          Al-Kashshāf (<span className="arabic">الكشّاف</span>) is available as both a <a href="https://app.kashshaf.com/" target="_blank" rel="noopener noreferrer">web application</a> and a desktop application, designed
+          Al-Kashshāf (<span className="arabic">الكشّاف</span>) is available as both a web application and a desktop application, designed
           for working with pre-modern Arabic texts (although the corpus contains texts up to 1348 AH/1930 CE). It provides 
           precise search capabilities that include morphological features. As it stands, it is the largest collection of searchable pre-modern Arabic texts available in a single interface.
         </p>

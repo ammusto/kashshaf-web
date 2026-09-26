@@ -17,8 +17,6 @@ const Header = () => {
             <li><Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link></li>
             {/* <li><Link to="/corpus" className={isActive('/corpus') ? 'active' : ''}>Browse Corpus</Link></li> */}
             <li><Link to="/docs" className={isActive('/docs') ? 'active' : ''}>Docs</Link></li>
-            <li><Link to="/download" className={isActive('/download') ? 'active' : ''}>Download</Link></li>
-            <li><a href="https://app.kashshaf.com/" target="_blank" rel="noopener noreferrer" className="nav-app-link">Web App</a></li>
           </ul>
         </nav>
       </div>
