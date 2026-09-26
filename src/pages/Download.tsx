@@ -150,7 +150,7 @@ const Download = () => {
       <div className="download-note">
         <p>
           <strong>First-time setup:</strong> On first launch, al-Kashshāf will offer to download
-          the corpus data (currently ~8 GB). You can also choose to use Online Mode if you have
+          the corpus data (currently ~16 GB). You can also choose to use Online Mode if you have
           limited storage space.
         </p>
         <p style={{ marginTop: '15px' }}>

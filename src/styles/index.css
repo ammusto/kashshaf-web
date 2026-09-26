@@ -617,7 +617,7 @@ main {
 
 /* About section */
 .about-section {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -668,9 +668,10 @@ main {
 
 /* Arabic text */
 .arabic {
-    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+    font-family: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade New', serif;
     direction: rtl !important;
-    font-size:1.3rem !important;
+    font-size: 1.3rem !important;
+    line-height: 1.9;
 }
 
 /* Loading state */
@@ -714,4 +715,442 @@ main {
     .download-cards {
         grid-template-columns: 1fr;
     }
+}
+
+/* ===== Spinner ===== */
+
+.spinner-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 20px;
+    color: #666;
+}
+
+.spinner {
+    width: 28px;
+    height: 28px;
+    border: 3px solid #e5e5e5;
+    border-top-color: #1f6feb;
+    border-radius: 50%;
+    animation: spinner-spin 0.8s linear infinite;
+}
+
+.spinner-label {
+    font-size: 0.95rem;
+}
+
+@keyframes spinner-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===== Corpus browser ===== */
+
+.corpus-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.corpus-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.corpus-search {
+    flex: 1;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: right;
+    font-family: 'Scheherazade New', 'Amiri', 'Noto Naskh Arabic', serif;
+}
+
+.corpus-search:focus {
+    outline: none;
+    border-color: #15803d;
+    box-shadow: 0 0 0 1px #15803d;
+}
+
+.corpus-count {
+    color: #666;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.corpus-error {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.corpus-table {
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.corpus-thead {
+    display: flex;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #555;
+    user-select: none;
+    height: 40px;
+}
+
+.corpus-th {
+    background: none;
+    border: none;
+    padding: 0 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.corpus-th:hover {
+    color: #15803d;
+}
+
+.corpus-th.active {
+    color: #15803d;
+}
+
+.sort-arrow {
+    font-size: 0.65rem;
+}
+
+.corpus-tbody-scroll {
+    height: 600px;
+    overflow-y: auto;
+}
+
+.corpus-table.no-virtualize .corpus-row {
+    position: relative;
+    height: auto;
+    transform: none;
+}
+
+.corpus-row {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.1s;
+    cursor: pointer;
+}
+
+.corpus-row:hover {
+    background: #f9f9f9;
+}
+
+.corpus-row:visited {
+    color: inherit;
+}
+
+.corpus-cell {
+    padding: 0 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+}
+
+.corpus-cell.arabic {
+    font-family: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade New', serif;
+    font-size: 1.45rem;
+    line-height: 2;
+}
+
+.col-title {
+    width: 40%;
+}
+
+.col-author {
+    width: 30%;
+}
+
+/* Death and Genre carry Latin numerals / English labels — read LTR within
+   their cells regardless of the row's RTL direction. */
+.col-death {
+    width: 12%;
+    text-align: left;
+    direction: ltr;
+}
+
+.col-genre {
+    width: 18%;
+    text-align: left;
+    direction: ltr;
+    text-transform: capitalize;
+}
+
+/* When the table only has 3 columns (author detail page), give title more room */
+.corpus-table.no-virtualize .col-title {
+    width: 60%;
+}
+
+.corpus-table.no-virtualize .col-death {
+    width: 15%;
+}
+
+.corpus-table.no-virtualize .col-genre {
+    width: 25%;
+}
+
+/* ===== Book / Author detail page ===== */
+
+.back-link {
+    background: none;
+    border: none;
+    color: #1f6feb;
+    cursor: pointer;
+    font-size: 0.95rem;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.book-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.book-author {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.book-author a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.book-author a:hover {
+    text-decoration: underline;
+}
+
+.book-death {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.book-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.book-tag {
+    background: #eef4ff;
+    color: #1f6feb;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    border: none;
+}
+
+button.book-tag-toggle {
+    cursor: pointer;
+    background: white;
+    border: 1px solid #1f6feb;
+    color: #1f6feb;
+}
+
+button.book-tag-toggle:hover {
+    background: #1f6feb;
+    color: white;
+}
+
+.book-section {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.book-section > h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.book-grid .span-2 {
+    grid-column: span 2;
+}
+
+.book-field-label {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.book-field-value {
+    font-size: 1.05rem;
+}
+
+.book-field-value.capitalize {
+    text-transform: capitalize;
+}
+
+.meta-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.meta-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.meta-label {
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+    width: 192px;
+    flex-shrink: 0;
+}
+
+.meta-values {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.meta-value {
+    text-align: right;
+    font-family: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade New', serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.pagination-warning {
+    color: #b91c1c;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.pagination-warning.with-divider {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.citation-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.citation-label {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.citation-style-btn {
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.citation-style-btn:hover {
+    background: #f5f5f5;
+}
+
+.citation-style-btn.active {
+    background: #1f6feb;
+    color: white;
+    border-color: #1f6feb;
+}
+
+.citation-copy-btn {
+    margin-left: auto;
+    padding: 4px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.citation-copy-btn:hover {
+    background: #f5f5f5;
+}
+
+.citation-rendered {
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 12px 16px;
+    line-height: 1.6;
+}
+
+.citation-warnings {
+    margin-top: 8px;
+    padding-left: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.muted {
+    color: #888;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .book-grid .span-2 {
+        grid-column: span 2;
+    }
+    .col-title { width: 50%; }
+    .col-author { width: 30%; }
+    .col-death { width: 10%; }
+    .col-genre { width: 10%; }
 }
