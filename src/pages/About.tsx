@@ -14,19 +14,22 @@ interface CorpusStats {
 
 const STATS_URL = 'https://cdn.kashshaf.com/stats.json';
 
-// Shown until stats.json answers (and if it never does): the 2.0.0 figures.
+// Shown until stats.json answers (and if it never does): the 4.3.0 figures.
 const FALLBACK: CorpusStats = {
-  corpus_version: '2.0.0',
+  corpus_version: '4.3.0',
   built_at: '',
-  books: 7176,
-  pages: 5711697,
-  tokens: 987907098,
+  books: 7199,
+  pages: 5728205,
+  tokens: 991616029,
   index_bytes: 0,
   db_bytes: 0,
 };
 
+/** The application version the suggested citation names; bump on release. */
+const APP_VERSION = '0.8.1';
+
 function formatGb(bytes: number): string {
-  return bytes > 0 ? `${(bytes / 1024 ** 3).toFixed(1)} GB` : '~17 GB';
+  return bytes > 0 ? `${(bytes / 1024 ** 3).toFixed(1)} GB` : '~10 GB';
 }
 
 const About = () => {
@@ -124,7 +127,7 @@ const About = () => {
           <a href="https://openiti.org/" target="_blank" rel="noopener noreferrer">OpenITI</a>, and{' '}
           <a href="https://nusus.net/" target="_blank" rel="noopener noreferrer">Nuṣūṣ</a>.
           Only texts with authors who died before 1348 AH (1930 CE) are included to avoid copyright concerns.
-          After aggregating texts from these three sources, the corpus underwent a multi-stage cleaning process before reaching its final count of 7,176 books.
+          After aggregating texts from these three sources, the corpus underwent a multi-stage cleaning process before reaching its current count of {stats.books.toLocaleString()} books.
         </p>
         <p>
           <strong>OCR Quality Filtering:</strong> The OpenITI corpus includes some texts produced through automatic OCR
@@ -189,6 +192,13 @@ const About = () => {
           Each page in the corpus is identified by its book, volume label, and page number, preserved as printed in the source edition. Volume labels (such as <span className="arabic">الجزء الأول</span>) and page numbers, which may be non-numeric in some texts, appear with every search result. When citing a hit found through al-Kashshāf in a publication, reference the volume and page as they appear in the source edition, along with the corpus version.
         </p>
 
+        <h4>Citing al-Kashshāf</h4>
+        <p>A suggested form, naming the application and corpus versions you used:</p>
+        <blockquote>
+          <p>Musto, Antonio. <em>al-Kashshāf</em>, version {APP_VERSION}, corpus {stats.corpus_version}, {new Date().getFullYear()}. https://kashshaf.com.</p>
+        </blockquote>
+        <p>A DOI will follow.</p>
+
         <h3>Key Features</h3>
         <ul>
           <li><strong>Multiple search modes:</strong> Surface form, lemma, and root-based searching</li>
@@ -217,9 +227,14 @@ const About = () => {
           contribute on <a href="https://github.com/ammusto/kashshaf" target="_blank" rel="noopener noreferrer">GitHub</a>.
         </p>
 
+        <h3>Privacy</h3>
+        <p>
+          The application sends nothing, ever, unless you press its bug report button.
+        </p>
+
         <h3>Contact</h3>
         <p>
-          For questions, bug reports, or feature requests, please open an issue on the{' '}
+          For questions, bug reports, or feature requests, write to antonio@kashshaf.com or open an issue on the{' '}
           <a href="https://github.com/ammusto/kashshaf/issues" target="_blank" rel="noopener noreferrer">
             GitHub issues page
           </a>.

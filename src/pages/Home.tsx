@@ -147,7 +147,7 @@ const Home = () => {
         <div className="feature-card">
           <h3>Online & Offline Modes</h3>
           <p>
-            Works offline with local corpus (~8 GB download) or online via API
+            Works offline with local corpus (~10 GB download) or online via API
             for users with storage constraints.
           </p>
         </div>
