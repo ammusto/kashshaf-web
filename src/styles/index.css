@@ -1154,3 +1154,66 @@ button.book-tag-toggle:hover {
     .col-death { width: 10%; }
     .col-genre { width: 10%; }
 }
+
+/* Testing status and mailing-list signup (front page) */
+.status-note {
+    max-width: 900px;
+    margin: 30px auto 0;
+    padding: 20px 24px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    color: #444;
+}
+
+.status-note > p {
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.signup-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.signup-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.signup-row input {
+    flex: 1 1 240px;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.signup-row input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.signup-row .btn {
+    padding: 10px 24px;
+    border: 2px solid #333;
+    font-family: inherit;
+}
+
+.signup-row .btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.signup-done {
+    margin: 0;
+    color: #444;
+}
+
+.signup-error {
+    margin: 8px 0 0;
+    font-size: 14px;
+    color: #a33;
+}
