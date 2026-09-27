@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Lightbox, { type LightboxImage } from '../components/Lightbox';
+import Screenshot from '../components/Screenshot';
 
 /** The screenshots on this page, in order, for the lightbox. */
 const SHOTS: LightboxImage[] = [
@@ -19,7 +20,7 @@ const Features = () => {
       {/* Lemma phrase search screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src="/screenshots/lemma-phrase.png" alt="Lemma phrase search" className="zoomable" onClick={() => setOpen(0)} />
+          <Screenshot full={{ src: '/screenshots/lemma-phrase.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/lemma-phrase-mobile.png', width: 885, height: 963 }} alt="Lemma phrase search" onClick={() => setOpen(0)} />
         </div>
         <p className="screenshot-caption">Lemma phrase search for ولي الله, which matches  ولي الله، أولياء الله، وليُّكم الله, etc.</p>
       </div>
@@ -47,7 +48,7 @@ const Features = () => {
 {/* Lemma phrase search screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src="/screenshots/cross-page.png" alt="A phrase found across two pages" className="zoomable" onClick={() => setOpen(1)} />
+          <Screenshot full={{ src: '/screenshots/cross-page.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/cross-page-mobile.png', width: 886, height: 963 }} alt="A phrase found across two pages" lazy onClick={() => setOpen(1)} />
         </div>
         <p className="screenshot-caption">The phrase "عند قبر سري السقطي" is split across two pages, but is identified.</p>
       </div>
@@ -69,7 +70,7 @@ const Features = () => {
       {/* Name search screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src="/screenshots/name-search.png" alt="Name search" className="zoomable" onClick={() => setOpen(2)} />
+          <Screenshot full={{ src: '/screenshots/name-search.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/name-search-mobile.png', width: 956, height: 963 }} alt="Name search" lazy onClick={() => setOpen(2)} />
         </div>
         <p className="screenshot-caption">Specialized name search</p>
       </div>
@@ -93,7 +94,7 @@ const Features = () => {
       {/* Proximity search screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot">
-          <img src="/screenshots/proximity-search.png" alt="Proximity search results" className="zoomable" onClick={() => setOpen(3)} />
+          <Screenshot full={{ src: '/screenshots/proximity-search.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/proximity-search-mobile.png', width: 1083, height: 963 }} alt="Proximity search results" lazy onClick={() => setOpen(3)} />
         </div>
         <p className="screenshot-caption">Proximity search between a root (عرف) and a term (الله)</p>
       </div>
@@ -122,7 +123,7 @@ const Features = () => {
       {/* Token popup screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot">
-          <img src="/screenshots/token-features.png" alt="Token morphological analysis popup" className="zoomable" onClick={() => setOpen(4)} />
+          <Screenshot full={{ src: '/screenshots/token-features.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/token-features-mobile.png', width: 863, height: 963 }} alt="Token morphological analysis popup" lazy onClick={() => setOpen(4)} />
         </div>
         <p className="screenshot-caption">Morphological analysis popup showing lemma, root, and grammatical features</p>
       </div>
@@ -146,7 +147,7 @@ const Features = () => {
       {/* Custom collection screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot">
-          <img src="/screenshots/custom-colections.png" alt="Custom collection" className="zoomable" onClick={() => setOpen(5)} />
+          <Screenshot full={{ src: '/screenshots/custom-colections.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/custom-colections-mobile.png', width: 953, height: 963 }} alt="Custom collection" lazy onClick={() => setOpen(5)} />
         </div>
         <p className="screenshot-caption">You can create and save custom collections to search</p>
       </div>
@@ -171,7 +172,7 @@ const Features = () => {
       {/* Filter example screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot">
-          <img src="/screenshots/filter-example.png" alt="Text filter example" className="zoomable" onClick={() => setOpen(6)} />
+          <Screenshot full={{ src: '/screenshots/filter-example.png', width: 1744, height: 963 }} mobile={{ src: '/screenshots/filter-example-mobile.png', width: 982, height: 963 }} alt="Text filter example" lazy onClick={() => setOpen(6)} />
         </div>
         <p className="screenshot-caption">You can filter texts by author, genre, title, and year</p>
       </div>

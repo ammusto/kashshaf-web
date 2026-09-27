@@ -391,6 +391,11 @@ main {
     margin-right: 52px; /* Balance the dots on left */
 }
 
+.screenshot-window picture,
+.screenshot picture {
+    display: block;
+}
+
 .screenshot-window img {
     display: block;
     width: 100%;
@@ -1253,26 +1258,50 @@ button.book-tag-toggle:hover {
 
 .lightbox-figure {
     margin: 0;
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
     cursor: default;
+    min-height: 0;
 }
 
-.lightbox-figure img {
+/* The zoom stage fills the figure; the image starts fitted inside it. */
+.lightbox-stage {
+    flex: 1 1 auto;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: none;
+}
+
+.lightbox-content {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content img {
     display: block;
     max-width: 100%;
-    max-height: calc(100vh - 110px);
+    max-height: 100%;
     width: auto;
     height: auto;
     border-radius: 6px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .lightbox-figure figcaption {
+    flex: 0 0 auto;
     color: #eee;
     font-size: 15px;
     text-align: center;

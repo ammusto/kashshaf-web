@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SignupForm from '../components/SignupForm';
 import Lightbox, { type LightboxImage } from '../components/Lightbox';
+import Screenshot from '../components/Screenshot';
 
 /** The screenshot under the signup. Swap the file and caption here. */
 const SHOT: LightboxImage = {
@@ -30,7 +31,7 @@ const Home = () => {
 
       <div className="screenshot-container large">
         <div className="screenshot-window">
-          <img src={SHOT.src} alt={SHOT.alt} className="zoomable" onClick={() => setOpen(true)} />
+          <Screenshot full={{ src: SHOT.src, width: 1338, height: 764 }} alt={SHOT.alt} onClick={() => setOpen(true)} />
         </div>
         {SHOT.caption && <p className="screenshot-caption">{SHOT.caption}</p>}
       </div>
