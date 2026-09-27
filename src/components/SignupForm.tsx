@@ -112,9 +112,7 @@ const SignupForm = () => {
 
   return (
     <form className="signup-form" onSubmit={submit}>
-      <label htmlFor="signup-email" className="signup-label">
-        Enter your email to receive updates
-      </label>
+
       <div className="signup-row">
         <input
           id="signup-email"

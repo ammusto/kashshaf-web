@@ -92,9 +92,12 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
 
   const page = clean(request.headers.get('referer') ?? pageFromBody, 500);
   const when = new Date().toISOString();
-  const message = {
+  // The address goes into two headers (Subject, Reply-To): validEmail admits
+  // printable ASCII only, so no newline or control character can reach them.
+  const message: Message = {
     to: env.EMAIL_TO || DEFAULT_TO,
     from: env.EMAIL_FROM || DEFAULT_FROM,
+    reply_to: email,
     subject: `[Updates] ${email}`,
     text: `Address: ${email}\nTime: ${when}\nPage: ${page || '(none)'}\n`,
   };
@@ -105,11 +108,24 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   return (await sendEmail(env, message)) ? ok() : failed();
 };
 
-/** One local part, one @, a dotted domain, no whitespace or control characters, RFC length. */
+/**
+ * Strict because the address lands in headers: printable ASCII only, no
+ * whitespace or control characters, one @, a local part of the usual
+ * characters, a dotted domain with an alphabetic top level, RFC length.
+ * Internationalised addresses are refused rather than encoded.
+ */
 function validEmail(s: string): boolean {
   if (s.length < 6 || s.length > 254) return false;
-  if (/\s/.test(s) || hasControl(s)) return false;
-  return /^[^@]+@[^@]+\.[^@.]{2,}$/.test(s);
+  if (/\s/.test(s) || hasControl(s) || !isAscii(s)) return false;
+  const [local, domain, ...rest] = s.split('@');
+  if (rest.length > 0 || !local || !domain) return false;
+  if (local.length > 64 || !/^[A-Za-z0-9!#$%&'*+/=?^_`{|}~.-]+$/.test(local) || local.startsWith('.') || local.endsWith('.') || local.includes('..')) return false;
+  return /^[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/.test(domain);
+}
+
+function isAscii(s: string): boolean {
+  for (let i = 0; i < s.length; i++) if (s.charCodeAt(i) > 0x7e) return false;
+  return true;
 }
 
 function isControl(code: number): boolean {
@@ -156,7 +172,16 @@ async function verifyTurnstile(secret: string, token: string, ip: string): Promi
   }
 }
 
-async function sendEmail(env: Env, message: { to: string; from: string; subject: string; text: string }): Promise<boolean> {
+/** The Email Service REST body; reply_to is its top-level field, not a custom header. */
+interface Message {
+  to: string;
+  from: string;
+  reply_to: string;
+  subject: string;
+  text: string;
+}
+
+async function sendEmail(env: Env, message: Message): Promise<boolean> {
   if (!env.EMAIL_API_TOKEN || !env.CF_ACCOUNT_ID) return false;
   try {
     const res = await fetch(`https://api.cloudflare.com/client/v4/accounts/${env.CF_ACCOUNT_ID}/email/sending/send`, {

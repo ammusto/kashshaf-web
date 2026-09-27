@@ -13,7 +13,7 @@ const Home = () => {
 
       <div className="status-note">
         <p>
-          al-Kashshāf is in private testing, and the public release is close. If you would like to hear when it opens, leave your address below.
+          al-Kashshāf is currently in private testing with a public release soon. If you would like to receive updates, enter your email below!
         </p>
         <SignupForm />
       </div>
