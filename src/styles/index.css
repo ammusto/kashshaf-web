@@ -1180,12 +1180,13 @@ button.book-tag-toggle:hover {
 
 .signup-row {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .signup-row input {
-    flex: 1 1 240px;
+    width: 100%;
     padding: 10px 12px;
     font-size: 16px;
     text-align: center;
