@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import Features from './pages/Features';
 import Corpus from './pages/Corpus';
 import BookPage from './pages/BookPage';
 import AuthorPage from './pages/AuthorPage';
@@ -15,6 +16,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/features" element={<Features />} />
             <Route path="/corpus" element={<Corpus />} />
             <Route path="/book/:id" element={<BookPage />} />
             <Route path="/author/:id" element={<AuthorPage />} />

@@ -14,9 +14,10 @@ const Header = () => {
         <nav>
           <ul>
             <li><Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link></li>
+            <li><Link to="/features" className={isActive('/features') ? 'active' : ''}>Features</Link></li>
+            <li><Link to="/docs" className={isActive('/docs') ? 'active' : ''}>Docs</Link></li>
             <li><Link to="/about" className={isActive('/about') ? 'active' : ''}>About</Link></li>
             {/* <li><Link to="/corpus" className={isActive('/corpus') ? 'active' : ''}>Browse Corpus</Link></li> */}
-            <li><Link to="/docs" className={isActive('/docs') ? 'active' : ''}>Docs</Link></li>
           </ul>
         </nav>
       </div>
