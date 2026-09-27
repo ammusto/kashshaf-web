@@ -1168,6 +1168,7 @@ button.book-tag-toggle:hover {
 .status-note > p {
     margin: 0 0 12px;
     line-height: 1.6;
+    text-align: center;
 }
 
 .signup-label {
@@ -1187,6 +1188,7 @@ button.book-tag-toggle:hover {
     flex: 1 1 240px;
     padding: 10px 12px;
     font-size: 16px;
+    text-align: center;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
