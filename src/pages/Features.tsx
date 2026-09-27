@@ -3,7 +3,7 @@ import Lightbox, { type LightboxImage } from '../components/Lightbox';
 
 /** The screenshots on this page, in order, for the lightbox. */
 const SHOTS: LightboxImage[] = [
-  { src: '/screenshots/lemma-phrase.png', alt: 'Lemma phrase search', caption: 'Lemma phrase search for ولي الله, which matches both ولي الله, أولياء الله, وليُّكم الله, etc.' },
+  { src: '/screenshots/lemma-phrase.png', alt: 'Lemma phrase search', caption: 'Lemma phrase search for ولي الله, which matches ولي الله, أولياء الله, وليُّكم الله, etc.' },
   { src: '/screenshots/cross-page.png', alt: 'A phrase found across two pages', caption: 'The phrase "عند قبر سري السقطي" is split across two pages, but is identified.' },
   { src: '/screenshots/name-search.png', alt: 'Name search', caption: 'Specialized name search' },
   { src: '/screenshots/proximity-search.png', alt: 'Proximity search results', caption: 'Proximity search between a root (عرف) and a term (الله)' },
@@ -21,7 +21,7 @@ const Features = () => {
         <div className="screenshot-window">
           <img src="/screenshots/lemma-phrase.png" alt="Lemma phrase search" className="zoomable" onClick={() => setOpen(0)} />
         </div>
-        <p className="screenshot-caption">Lemma phrase search for ولي الله, which matches both ولي الله, أولياء الله, وليُّكم الله, etc.</p>
+        <p className="screenshot-caption">Lemma phrase search for ولي الله, which matches  ولي الله، أولياء الله، وليُّكم الله, etc.</p>
       </div>
       <div className="features-grid">
         <div className="feature-card">

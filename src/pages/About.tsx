@@ -229,7 +229,7 @@ const About = () => {
 
         <h3>Privacy</h3>
         <p>
-          The application sends nothing, ever, unless you press its bug report button.
+          The application sends nothing (unless you submit a bug report) and does not collect any personal data.
         </p>
 
         <h3>Contact</h3>
