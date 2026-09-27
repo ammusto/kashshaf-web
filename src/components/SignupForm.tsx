@@ -107,7 +107,7 @@ const SignupForm = () => {
   }
 
   if (state === 'done') {
-    return <p className="signup-done">Thanks. You will hear from us when al-Kashshāf opens.</p>;
+    return <p className="signup-done">You will receive information about updates, including release—Thank you!.</p>;
   }
 
   return (
