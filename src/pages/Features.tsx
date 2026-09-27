@@ -6,7 +6,7 @@ const Features = () => {
         <div className="screenshot-window">
           <img src="/screenshots/lemma-phrase.png" alt="Lemma phrase search" />
         </div>
-        <p className="screenshot-caption">Lemma phrase search for ولي الله, which matches both ولي الله and أولياء الله</p>
+        <p className="screenshot-caption">Lemma phrase search for ولي الله, which matches both ولي الله, أولياء الله, وليُّكم الله, etc.</p>
       </div>
       <div className="features-grid">
         <div className="feature-card">
@@ -28,6 +28,21 @@ const Features = () => {
             while OR terms provide alternatives.
           </p>
         </div>
+      </div>
+{/* Lemma phrase search screenshot */}
+      <div className="screenshot-container large">
+        <div className="screenshot-window">
+          <img src="/screenshots/cross-page.png" alt="Lemma phrase search" />
+        </div>
+        <p className="screenshot-caption">The phrase "عند قبر سري السقطي" is split across two pages, but is identified.</p>
+      </div>
+      <div className="features-grid">
+        <div className="feature-card">
+          <h3>Find Results Across Pages</h3>
+          <p>
+            Text that spans two pages is a common limitation of current search tools. If part of your quote (up to 20 tokens) appears on a second page, Kashshāf will be able to find it.
+          </p>
+        </div>
         <div className="feature-card">
           <h3>Export Results</h3>
           <p>
@@ -36,7 +51,6 @@ const Features = () => {
           </p>
         </div>
       </div>
-
       {/* Name search screenshot */}
       <div className="screenshot-container large">
         <div className="screenshot-window">

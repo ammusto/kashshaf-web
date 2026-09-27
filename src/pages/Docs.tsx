@@ -25,7 +25,7 @@ const Docs = () => {
           <div>
             <h2>Al-Kashshāf Overview</h2>
             <p>
-              Al-Kashshāf is a research environment for exploring medieval Arabic texts. It searches a corpus of
+              Al-Kashshāf is a research environment for exploring Arabic texts. It searches a corpus of
               some 7,200 texts by surface form, lemma, or root, with phrases, Boolean and proximity queries,
               wildcards, and a dedicated name search.
             </p>
