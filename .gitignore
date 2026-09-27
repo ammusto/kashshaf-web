@@ -38,3 +38,7 @@ Thumbs.db
 venv
 __pycache__
 *.py[cod]
+
+# Wrangler local state and secrets
+.wrangler
+.dev.vars

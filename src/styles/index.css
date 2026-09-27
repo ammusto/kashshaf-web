@@ -1217,3 +1217,17 @@ button.book-tag-toggle:hover {
     font-size: 14px;
     color: #a33;
 }
+
+.signup-hp {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.signup-turnstile {
+    margin-top: 10px;
+    min-height: 0;
+}
