@@ -230,7 +230,7 @@ const About = () => {
         <p>Everything added by this project is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;4.0</a>: tokenization, lemma, root, part-of-speech and feature annotation, clitic segmentation, pagination and volume reconciliation, edition verification status, and catalogue metadata.</p>
 
         <h4>Attribution</h4>
-        <p>Morphological analysis uses <a href="https://github.com/CAMeL-Lab/camel_tools" rel="noopener">CAMeL&nbsp;Tools</a> (code MIT; the MSA morphology database and disambiguation models are GPL&nbsp;v2). Please cite OpenITI by release version when citing texts drawn from their corpus, and cite al-Kashshāf by application and corpus version as given above.</p>
+        Please cite OpenITI by release version when citing texts drawn from their corpus, and cite al-Kashshāf by application and corpus version as given above.</p>
         <h3>Privacy</h3>
         <p>
           The application sends nothing (unless you submit a bug report) and does not collect any personal data.
