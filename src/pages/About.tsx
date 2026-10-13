@@ -76,7 +76,7 @@ const About = () => {
         <blockquote>
           <p dir="auto"><strong>NB:</strong> Morphological analysis uses CAMeL Tools with the MSA morphological database. While MSA and Classical Arabic share core grammar, archaic vocabulary or rare classical forms may produce inaccurate lemmas, POS tags, or other features.</p>
         </blockquote>
-        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and <a href="https://kitab-project.org" rel="noopener">KITAB</a> projects. The sources and original IDs of each text is visible in the corpus metadata pages, and without the effort of these projects, especially al-Maktaba al-Shāmila, none of this would be possible.</p>
+        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shāmila</a>, <a href="https://ablibrary.net/">Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and <a href="https://kitab-project.org" rel="noopener">KITAB</a> projects. The source and original ID of each text are visible in the corpus metadata pages, and without the effort of these projects, especially al-Maktaba al-Shāmila, none of this would be possible.</p>
         <h4>Corpus Statistics</h4>
         <table className="corpus-stats">
           <tbody>
@@ -105,7 +105,7 @@ const About = () => {
 
         <h4>Corpus Versioning</h4>
         <p>
-          The corpus is versioned and periodically rebuilt as new texts are added or the cleaning pipeline is refined. If you are citing the corpus in publications should reference a specific version, since counts and individual token analyses can change between builds.
+          The corpus is versioned and periodically rebuilt as new texts are added or the cleaning pipeline is refined. Publications citing the corpus should reference a specific version, since counts and individual token analyses can change between builds.
         </p>
 
         <h4>Available Metadata</h4>
@@ -116,7 +116,7 @@ const About = () => {
         <h4>Data Aggregation and Cleaning</h4>
         <p>
           The corpus is compiled from the sources listed above. Only texts with authors who died before 1348 AH (1930 CE) are included to avoid copyright concerns.
-          After aggregating texts from these three sources, the corpus underwent a multi-stage cleaning process before reaching its current count of {stats.books.toLocaleString()} books.
+          After aggregating texts from these sources, the corpus underwent a multi-stage cleaning process before reaching its current count of {stats.books.toLocaleString()} books.
         </p>
         <p>
           <strong>OCR Quality Filtering:</strong> The OpenITI corpus includes some texts produced through automatic OCR
@@ -209,16 +209,16 @@ const About = () => {
           <li><strong>React:</strong> Performant UI</li>
         </ul>
         <h3>Development</h3>
-        <p>Initital funding for this project under the name mutūn was provided by NYU's faculty DH seed grant program, with <a href="https://www.antoniomusto.com" target="_blank" rel="noopener noreferrer">Antonio Musto</a> as the PI and Giovanni DiRusso and Jeremy Farrell as team members. Project development went into hiatus due to lack of funding opportunities, but was restarted by Antonio, who is the sole developer.</p>
+        <p>Initial funding for this project under the name mutūn was provided by NYU's faculty DH seed grant program, with <a href="https://www.antoniomusto.com" target="_blank" rel="noopener noreferrer">Antonio Musto</a> as the PI and Giovanni DiRusso and Jeremy Farrell as team members. Project development went into hiatus due to lack of funding opportunities, but was restarted by Antonio, who is the sole developer.</p>
         <h3>Licensing</h3>
 
         <p>Al-Kashshāf is open source. Source code, issues, and contributions:
-          <a href="https://github.com/YOURUSER/kashshaf" rel="noopener">GitHub</a>.</p>
+          <a href="https://github.com/ammusto/kashshaf" rel="noopener">GitHub</a>.</p>
 
         <p>The project has three layers, licensed separately.</p>
 
         <h4>Software</h4>
-        <p>The application, search engine, and processing pipeline are released under the 
+        <p>The application, search engine, and processing pipeline are released under the
           <a href="https://opensource.org/license/mit" rel="noopener">MIT License</a>.
           Free to use, modify, and redistribute, with attribution.</p>
 
@@ -230,7 +230,7 @@ const About = () => {
         <p>Everything added by this project is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;4.0</a>: tokenization, lemma, root, part-of-speech and feature annotation, clitic segmentation, pagination and volume reconciliation, edition verification status, and catalogue metadata.</p>
 
         <h4>Attribution</h4>
-        Please cite OpenITI by release version when citing texts drawn from their corpus, and cite al-Kashshāf by application and corpus version as given above.</p>
+        <p>Please cite OpenITI by release version when citing texts drawn from their corpus, and cite al-Kashshāf by application and corpus version as given above.</p>
         <h3>Privacy</h3>
         <p>
           The application sends nothing (unless you submit a bug report) and does not collect any personal data.
@@ -238,7 +238,7 @@ const About = () => {
 
         <h3>Contact</h3>
         <p>
-          For questions, bug reports, or feature requests, write to antonio@kashshaf.com or open an issue on the{' '}
+          For questions, bug reports, or feature requests, write to <a href="mailto:antonio@kashshaf.com">antonio@kashshaf.com</a> or open an issue on the{' '}
           <a href="https://github.com/ammusto/kashshaf/issues" target="_blank" rel="noopener noreferrer">
             GitHub issues page
           </a>.
