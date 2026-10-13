@@ -76,14 +76,8 @@ const About = () => {
         <blockquote>
           <p dir="auto"><strong>NB:</strong> Morphological analysis uses CAMeL Tools with the MSA morphological database. While MSA and Classical Arabic share core grammar, archaic vocabulary or rare classical forms may produce inaccurate lemmas, POS tags, or other features.</p>
         </blockquote>
-        <p>
-          The corpus draws primarily from the texts in{' '}
-          <a href="https://shamela.ws/" target="_blank" rel="noopener noreferrer">al-Maktaba al-Shamela</a>,
-          but includes additional texts collected by the{' '}
-          <a href="https://openiti.org/" target="_blank" rel="noopener noreferrer">OpenITI</a>
-          {' '}and{' '}
-          <a href="https://kitab-project.org/" target="_blank" rel="noopener noreferrer">KITAB</a> projects, and the  <a href="https://nusus.net/" target="_blank" rel="noopener noreferrer">Nuṣūṣ</a> corpus.
-        </p>
+        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">the Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and
+          <a href="https://kitab-project.org" rel="noopener">KITAB</a> project. The sources and original IDs of each text is visible in the corpus metadata pages.</p>
         <h4>Corpus Statistics</h4>
         <table className="corpus-stats">
           <tbody>
@@ -232,10 +226,6 @@ const About = () => {
         <p>The application, search engine, and processing pipeline are released under the 
           <a href="https://opensource.org/license/mit" rel="noopener">MIT License</a>.
           Free to use, modify, and redistribute, with attribution.</p>
-
-        <h4>Base texts</h4>
-        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">the Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and
-          <a href="https://kitab-project.org" rel="noopener">KITAB</a> project. The sources and original IDs of each text is visible in the corpus metadata pages.</p>
 
         <h4>Texts derived from OpenITI</h4>
         <p>Texts originating in the OpenITI corpus are redistributed under
