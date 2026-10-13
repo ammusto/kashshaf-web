@@ -62,7 +62,7 @@ const About = () => {
         <h2>Project Overview</h2>
         <p>
           Al-Kashshāf (<span className="arabic">الكشّاف</span>) is available as both a web application and a desktop application, designed
-          for working with pre-modern Arabic texts (although the corpus contains texts up to 1348 AH/1930 CE). It provides 
+          for working with pre-modern Arabic texts (although the corpus contains texts up to 1348 AH/1930 CE). It provides
           precise search capabilities that include morphological features. As it stands, it is the largest collection of searchable pre-modern Arabic texts available in a single interface.
         </p>
 
@@ -80,7 +80,7 @@ const About = () => {
           The corpus draws primarily from the texts in{' '}
           <a href="https://shamela.ws/" target="_blank" rel="noopener noreferrer">al-Maktaba al-Shamela</a>,
           but includes additional texts collected by the{' '}
-          <a href="https://openiti.org/" target="_blank" rel="noopener noreferrer">OpenITI</a> 
+          <a href="https://openiti.org/" target="_blank" rel="noopener noreferrer">OpenITI</a>
           {' '}and{' '}
           <a href="https://kitab-project.org/" target="_blank" rel="noopener noreferrer">KITAB</a> projects, and the  <a href="https://nusus.net/" target="_blank" rel="noopener noreferrer">Nuṣūṣ</a> corpus.
         </p>
@@ -139,7 +139,7 @@ const About = () => {
           tokens as proper nouns (<em>noun_prop</em>) with unknown roots. While many of these are legitimate proper nouns
           (like people or places), others are common words, abbreviations,
           or OCR artifacts that were incorrectly tagged. A cleaning pipeline was applied to fix unambiguous cases
-           and apply a handful of curated corrections for known systematic errors
+          and apply a handful of curated corrections for known systematic errors
           such as abbreviations (<em>ثنا</em>, <em>نا</em>), adverbs (<em>حيث</em>, <em>هكذا</em>), and other grammatical particles.
           This process corrected approximately 14.8 million token classifications.
         </p>
@@ -221,12 +221,41 @@ const About = () => {
         </ul>
         <h3>Development</h3>
         <p>Initital funding for this project under the name mutūn was provided by NYU's faculty DH seed grant program, with <a href="https://www.antoniomusto.com" target="_blank" rel="noopener noreferrer">Antonio Musto</a> as the PI and Giovanni DiRusso and Jeremy Farrell as team members. Project development went into hiatus due to lack of funding opportunities, but was restarted by Antonio, who is the sole developer.</p>
-        <h3>Open Source</h3>
-        <p>
-          Al-Kashshāf is open source software. You can view the source code, report issues, or
-          contribute on <a href="https://github.com/ammusto/kashshaf" target="_blank" rel="noopener noreferrer">GitHub</a>.
-        </p>
+        <h3>Licensing</h3>
 
+        <p>Al-Kashshāf is open source. Source code, issues, and contributions:
+          <a href="https://github.com/YOURUSER/kashshaf" rel="noopener">GitHub</a>.</p>
+
+        <p>The project has three layers, licensed separately.</p>
+
+        <h4>Software</h4>
+        <p>The application, search engine, and processing pipeline are released under the
+          <a href="https://opensource.org/license/mit" rel="noopener">MIT License</a>.
+          Free to use, modify, and redistribute, with attribution.</p>
+
+        <h4>Base texts</h4>
+        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">the Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ</a> Corpus, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and
+          <a href="https://kitab-project.org" rel="noopener">KITAB</a> project. The sources and original IDs of each text is visible in the corpus metadata pages.</p>
+
+        <h4>Texts derived from OpenITI</h4>
+        <p>Texts originating in the OpenITI corpus are redistributed under
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener">CC&nbsp;BY-NC-SA&nbsp;4.0</a>,
+          the license under which OpenITI releases them. These texts have been modified:
+          mARkdown stripped and editorial markers mostly removed, orthography normalized, pagination
+          reconciled, and morphological annotation added.</p>
+
+        <h4>The Kashshāf corpus layer</h4>
+        <p>Everything added by this project is released under
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;4.0</a>:
+          tokenization, lemma, root, part-of-speech and feature annotation, clitic
+          segmentation, pagination and volume reconciliation, edition verification status,
+          and catalogue metadata.</p>
+
+        <h4>Attribution</h4>
+        <p>Morphological analysis uses <a href="https://github.com/CAMeL-Lab/camel_tools" rel="noopener">CAMeL&nbsp;Tools</a>
+          (code MIT; the MSA morphology database and disambiguation models are GPL&nbsp;v2).
+          Please cite OpenITI by release version when citing texts drawn from their corpus,
+          and cite al-Kashshāf by application and corpus version as given above.</p>
         <h3>Privacy</h3>
         <p>
           The application sends nothing (unless you submit a bug report) and does not collect any personal data.
