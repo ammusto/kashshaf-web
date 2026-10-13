@@ -229,12 +229,12 @@ const About = () => {
         <p>The project has three layers, licensed separately.</p>
 
         <h4>Software</h4>
-        <p>The application, search engine, and processing pipeline are released under the
+        <p>The application, search engine, and processing pipeline are released under the 
           <a href="https://opensource.org/license/mit" rel="noopener">MIT License</a>.
           Free to use, modify, and redistribute, with attribution.</p>
 
         <h4>Base texts</h4>
-        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">the Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ</a> Corpus, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and
+        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">the Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and
           <a href="https://kitab-project.org" rel="noopener">KITAB</a> project. The sources and original IDs of each text is visible in the corpus metadata pages.</p>
 
         <h4>Texts derived from OpenITI</h4>
