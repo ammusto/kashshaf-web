@@ -76,8 +76,7 @@ const About = () => {
         <blockquote>
           <p dir="auto"><strong>NB:</strong> Morphological analysis uses CAMeL Tools with the MSA morphological database. While MSA and Classical Arabic share core grammar, archaic vocabulary or rare classical forms may produce inaccurate lemmas, POS tags, or other features.</p>
         </blockquote>
-        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">the Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and
-          <a href="https://kitab-project.org" rel="noopener">KITAB</a> project. The sources and original IDs of each text is visible in the corpus metadata pages.</p>
+        <p> Texts are drawn primarily from <a href="https://shamela.ws" rel="noopener">al-Maktaba al-Shamela</a>, <a href="https://ablibrary.net/">Maktabat Ahl al-Bayt</a>, the <a href="https://nusus.net/">Nuṣūṣ Corpus</a>, and the <a href="https://openiti.org" rel="noopener">OpenITI</a> and <a href="https://kitab-project.org" rel="noopener">KITAB</a> projects. The sources and original IDs of each text is visible in the corpus metadata pages.</p>
         <h4>Corpus Statistics</h4>
         <table className="corpus-stats">
           <tbody>
@@ -116,11 +115,7 @@ const About = () => {
 
         <h4>Data Aggregation and Cleaning</h4>
         <p>
-          The corpus is compiled from three major sources of digitized Arabic texts:{' '}
-          <a href="https://shamela.ws/" target="_blank" rel="noopener noreferrer">al-Maktaba al-Shamela</a>,{' '}
-          <a href="https://openiti.org/" target="_blank" rel="noopener noreferrer">OpenITI</a>, and{' '}
-          <a href="https://nusus.net/" target="_blank" rel="noopener noreferrer">Nuṣūṣ</a>.
-          Only texts with authors who died before 1348 AH (1930 CE) are included to avoid copyright concerns.
+          The corpus is compiled from the sources listed above. Only texts with authors who died before 1348 AH (1930 CE) are included to avoid copyright concerns.
           After aggregating texts from these three sources, the corpus underwent a multi-stage cleaning process before reaching its current count of {stats.books.toLocaleString()} books.
         </p>
         <p>
@@ -228,24 +223,14 @@ const About = () => {
           Free to use, modify, and redistribute, with attribution.</p>
 
         <h4>Texts derived from OpenITI</h4>
-        <p>Texts originating in the OpenITI corpus are redistributed under
-          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener">CC&nbsp;BY-NC-SA&nbsp;4.0</a>,
-          the license under which OpenITI releases them. These texts have been modified:
-          mARkdown stripped and editorial markers mostly removed, orthography normalized, pagination
-          reconciled, and morphological annotation added.</p>
+        <p>Texts originating in the OpenITI corpus are redistributed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener">CC&nbsp;BY-NC-SA&nbsp;4.0</a>,
+          the license under which OpenITI releases them. These texts have been modified: stripped and editorial markers mostly removed, orthography normalized, pagination reconciled, and morphological annotation added.</p>
 
         <h4>The Kashshāf corpus layer</h4>
-        <p>Everything added by this project is released under
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;4.0</a>:
-          tokenization, lemma, root, part-of-speech and feature annotation, clitic
-          segmentation, pagination and volume reconciliation, edition verification status,
-          and catalogue metadata.</p>
+        <p>Everything added by this project is released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC&nbsp;BY-SA&nbsp;4.0</a>: tokenization, lemma, root, part-of-speech and feature annotation, clitic segmentation, pagination and volume reconciliation, edition verification status, and catalogue metadata.</p>
 
         <h4>Attribution</h4>
-        <p>Morphological analysis uses <a href="https://github.com/CAMeL-Lab/camel_tools" rel="noopener">CAMeL&nbsp;Tools</a>
-          (code MIT; the MSA morphology database and disambiguation models are GPL&nbsp;v2).
-          Please cite OpenITI by release version when citing texts drawn from their corpus,
-          and cite al-Kashshāf by application and corpus version as given above.</p>
+        <p>Morphological analysis uses <a href="https://github.com/CAMeL-Lab/camel_tools" rel="noopener">CAMeL&nbsp;Tools</a> (code MIT; the MSA morphology database and disambiguation models are GPL&nbsp;v2). Please cite OpenITI by release version when citing texts drawn from their corpus, and cite al-Kashshāf by application and corpus version as given above.</p>
         <h3>Privacy</h3>
         <p>
           The application sends nothing (unless you submit a bug report) and does not collect any personal data.
